@@ -1,0 +1,14 @@
+#!/bin/bash
+
+function run {
+  echo "echo $1"
+  $@&
+}
+
+dir=$(pwd)
+input=$1
+
+run konsole --workdir $dir -e "zsh -i -c vim $input"
+run konsole --workdir $dir
+run konsole --workdir $dir
+
